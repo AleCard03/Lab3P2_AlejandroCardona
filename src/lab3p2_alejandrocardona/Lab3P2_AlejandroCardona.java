@@ -40,8 +40,24 @@ public class Lab3P2_AlejandroCardona {
                 case 1 : {
                     
                     System.out.println("---Agregar Automovil---");
-                    System.out.println("Ingrese una placa");
-                    String placa = readS.nextLine();
+                    boolean placaValida = true;
+                    String placa ="";
+                    do{
+                        
+                        System.out.println("Ingrese una placa");
+                        placa = readS.nextLine();
+                        for (Vehiculo x : vehiculoLista) {
+
+                            if(vehiculoLista.get(vehiculoLista.indexOf(x)).getPlaca().equals(placa)){
+                                placaValida = false;
+                                break;
+                            }
+                            else{
+                                placaValida = true;
+                            }
+
+                        }
+                    }while(placaValida == false);
                     System.out.println("Ingrese una marca");
                     String marca = readS.nextLine();
                     System.out.println("Ingrese un modelo");
@@ -164,6 +180,7 @@ public class Lab3P2_AlejandroCardona {
                 break;
                 
                 case 4 : {
+                    if(vehiculoLista.size()>0){
                     
                     printList();
                     int modV;
@@ -195,9 +212,24 @@ public class Lab3P2_AlejandroCardona {
                             
                             case 1 : {
                                 
-                                System.out.println("Ingrese una placa");
-                                String placa = readS.nextLine();
-                                vehiculoLista.get(modV).setMarca(placa);      
+                                boolean placaValida = true;
+                                String placa ="";
+                                do{
+
+                                    System.out.println("Ingrese una placa");
+                                    placa = readS.nextLine();
+                                    for (Vehiculo x : vehiculoLista) {
+
+                                        if(vehiculoLista.get(vehiculoLista.indexOf(x)).getPlaca().equals(placa)){
+                                            placaValida = false;
+                                            break;
+                                        }
+                                        else{
+                                            placaValida = true;
+                                        }
+
+                                    }
+                                }while(placaValida == false);    
                                                                 
                             }//fin case 1
                             break;
@@ -352,9 +384,24 @@ public class Lab3P2_AlejandroCardona {
                             
                             case 1 : {
                                 
-                                System.out.println("Ingrese una placa");
-                                String placa = readS.nextLine();
-                                vehiculoLista.get(modV).setMarca(placa);      
+                                boolean placaValida = true;
+                                String placa ="";
+                                do{
+
+                                    System.out.println("Ingrese una placa");
+                                    placa = readS.nextLine();
+                                    for (Vehiculo x : vehiculoLista) {
+
+                                        if(vehiculoLista.get(vehiculoLista.indexOf(x)).getPlaca().equals(placa)){
+                                            placaValida = false;
+                                            break;
+                                        }
+                                        else{
+                                            placaValida = true;
+                                        }
+
+                                    }
+                                }while(placaValida == false);       
                                                                 
                             }//fin case 1
                             break;
@@ -459,9 +506,24 @@ public class Lab3P2_AlejandroCardona {
                             
                             case 1 : {
                                 
-                                System.out.println("Ingrese una placa");
-                                String placa = readS.nextLine();
-                                vehiculoLista.get(modV).setMarca(placa);      
+                                boolean placaValida = true;
+                                String placa ="";
+                                do{
+
+                                    System.out.println("Ingrese una placa");
+                                    placa = readS.nextLine();
+                                    for (Vehiculo x : vehiculoLista) {
+
+                                        if(vehiculoLista.get(vehiculoLista.indexOf(x)).getPlaca().equals(placa)){
+                                            placaValida = false;
+                                            break;
+                                        }
+                                        else{
+                                            placaValida = true;
+                                        }
+
+                                    }
+                                }while(placaValida == false);         
                                                                 
                             }//fin case 1
                             break;
@@ -543,21 +605,26 @@ public class Lab3P2_AlejandroCardona {
                             break;
                         }
                     }
+                    }
                 }//fin case 4
                 break;
                 
                 case 5 : {
                     
-                    printList();
-                    int eliminar;
-                    do{
-                        
-                        System.out.println("Ingrese el indice del vehiculo a eliminar");
-                        eliminar = read.nextInt();
-                    }while(eliminar < 0 || eliminar >= vehiculoLista.size());
-                     
-                    vehiculoLista.remove(eliminar);
-                    
+                    if(vehiculoLista.size()>0){
+                        printList();
+                        int eliminar;
+                        do{
+
+                            System.out.println("Ingrese el indice del vehiculo a eliminar");
+                            eliminar = read.nextInt();
+                        }while(eliminar < 0 || eliminar >= vehiculoLista.size());
+
+                        vehiculoLista.remove(eliminar);
+                    }
+                    else{
+                        System.out.println("Considere agregar un vehiculo");
+                    }
                 }//fin case 5
                 break;
                 
@@ -569,8 +636,37 @@ public class Lab3P2_AlejandroCardona {
                 break;
                 
                 case 7 : {
+                    if(vehiculoLista.size()>0){
                     
-                    
+                        printList();
+                        int boleta;
+                        int acum = 525;
+                        do{
+
+                            System.out.println("Ingrese el indice del vehiculo a mostrar");
+                            boleta = read.nextInt();
+                        }while(boleta < 0 || boleta >= vehiculoLista.size());
+                        System.out.println(boleta);
+                        if(vehiculoLista.get(boleta) instanceof Automovil){
+
+                            acum+= 1200;
+
+                        }
+                        if(vehiculoLista.get(boleta) instanceof Motocicleta){
+
+                            acum+= 200;
+
+                        }
+                        if(vehiculoLista.get(boleta) instanceof Autobus){
+
+                            acum+= 1000;
+
+                        }
+                        System.out.println(acum);
+                        }
+                    else{
+                        System.out.println("Considere agregar algo primero");
+                    }
                     
                 }//fin case 7
                 break;
@@ -597,12 +693,48 @@ public class Lab3P2_AlejandroCardona {
     static void printList (){
         
         String acum = "";
+        String acumCarro = "";
+        String acumMoto = "";
+        String acumBus = "";
+        int contC = 0;
+        int contM = 0;
+        int contB = 0;
         for (Vehiculo vehiculo : vehiculoLista) {
             
             acum += vehiculoLista.indexOf(vehiculo)+"- "+vehiculo+"\n";
             
+            
         }
+        
+        for (Vehiculo vehiculo : vehiculoLista) {
+            
+            if(vehiculo instanceof Automovil){
+                acumCarro += vehiculoLista.indexOf(vehiculo)+"- "+vehiculo+"\n";
+                contC++;
+            }
+        }
+        
+        for (Vehiculo vehiculo : vehiculoLista) {
+            
+            if(vehiculo instanceof Autobus){
+                acumMoto += vehiculoLista.indexOf(vehiculo)+"- "+vehiculo+"\n";
+                contM++;
+            }            
+        }
+        
+        for (Vehiculo vehiculo : vehiculoLista) {
+            
+            if(vehiculo instanceof Autobus){
+                acumBus += vehiculoLista.indexOf(vehiculo)+"- "+vehiculo+"\n";
+                contB++;
+            }
+            
+        }
+        
         System.out.println(acum);
+        System.out.println(acumCarro+"\n Hay "+contC+" automoviles");
+        System.out.println(acumMoto+"\n Hay "+contM+" motocicletas");
+        System.out.println(acumBus+"\n Hay "+contB+" autobuses");
         
     }//fin printList
     
