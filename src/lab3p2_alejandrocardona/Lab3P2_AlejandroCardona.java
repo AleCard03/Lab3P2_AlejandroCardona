@@ -131,7 +131,31 @@ public class Lab3P2_AlejandroCardona {
                 
                 case 3 : {
                     
+                    System.out.println("---Agregar Automovil---");
+                    System.out.println("Ingrese una placa");
+                    String placa = readS.nextLine();
+                    System.out.println("Ingrese una marca");
+                    String marca = readS.nextLine();
+                    System.out.println("Ingrese un modelo");
+                    String modelo = readS.nextLine();     
+                    System.out.println("Ingrese el tipo del carro\n1. Turismo, Camioneta, etc.\n2. Motocicleta\n3. Autobus");
+                    String tipoV = readS.nextLine();
+                    System.out.println("Ingrese el año de lanzamiento del carro (yyyy)");
+                    String fecha = readS.nextLine();
+                    DateFormat df = new SimpleDateFormat("yyyy");
+                    Date yearR = df.parse(fecha);
+                    Color color = JColorChooser.showDialog(null, "Ingrese el color del vehiculo", Color.yellow);
                     
+                    System.out.println("Ingrese la capacidad del bus");
+                    int capacidad = read.nextInt();
+                    
+                    System.out.println("Ingrese el numero de ejes del autobus");
+                    int numEjes = read.nextInt();
+                    
+                    System.out.println("Ingrese la longitud del bus");
+                    double longitud = read.nextDouble();
+                    
+                    Motocicleta moto = new Motocicleta(capacidad, numEjes, longitud,placa, marca, modelo, tipoV, yearR, color);
                     
                 }//fin case 3
                 break;
