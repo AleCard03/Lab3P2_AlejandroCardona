@@ -120,8 +120,24 @@ public class Lab3P2_AlejandroCardona {
                 case 2 : {
                     
                     System.out.println("---Agregar Motocicleta---");
-                    System.out.println("Ingrese una placa");
-                    String placa = readS.nextLine();
+                    boolean placaValida = true;
+                    String placa ="";
+                    do{
+                        
+                        System.out.println("Ingrese una placa");
+                        placa = readS.nextLine();
+                        for (Vehiculo x : vehiculoLista) {
+
+                            if(vehiculoLista.get(vehiculoLista.indexOf(x)).getPlaca().equals(placa)){
+                                placaValida = false;
+                                break;
+                            }
+                            else{
+                                placaValida = true;
+                            }
+
+                        }
+                    }while(placaValida == false);
                     System.out.println("Ingrese una marca");
                     String marca = readS.nextLine();
                     System.out.println("Ingrese un modelo");
@@ -150,8 +166,24 @@ public class Lab3P2_AlejandroCardona {
                 case 3 : {
                     
                     System.out.println("---Agregar Autobus---");
-                    System.out.println("Ingrese una placa");
-                    String placa = readS.nextLine();
+                    boolean placaValida = true;
+                    String placa ="";
+                    do{
+                        
+                        System.out.println("Ingrese una placa");
+                        placa = readS.nextLine();
+                        for (Vehiculo x : vehiculoLista) {
+
+                            if(vehiculoLista.get(vehiculoLista.indexOf(x)).getPlaca().equals(placa)){
+                                placaValida = false;
+                                break;
+                            }
+                            else{
+                                placaValida = true;
+                            }
+
+                        }
+                    }while(placaValida == false);
                     System.out.println("Ingrese una marca");
                     String marca = readS.nextLine();
                     System.out.println("Ingrese un modelo");
