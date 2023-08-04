@@ -548,7 +548,15 @@ public class Lab3P2_AlejandroCardona {
                 
                 case 5 : {
                     
-                    
+                    printList();
+                    int eliminar;
+                    do{
+                        
+                        System.out.println("Ingrese el indice del vehiculo a eliminar");
+                        eliminar = read.nextInt();
+                    }while(eliminar < 0 || eliminar >= vehiculoLista.size());
+                     
+                    vehiculoLista.remove(eliminar);
                     
                 }//fin case 5
                 break;
