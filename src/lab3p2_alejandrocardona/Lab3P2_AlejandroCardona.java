@@ -96,12 +96,35 @@ public class Lab3P2_AlejandroCardona {
                     int asientos = read.nextInt();
                     
                     Automovil auto = new Automovil(comb, puertas, transmision, asientos,placa, marca, modelo, tipoV, yearR, color);
+                    carritos.add(auto);
+                    
                 }//fin case 1
                 break;
                 
                 case 2 : {
                     
+                    System.out.println("---Agregar Automovil---");
+                    System.out.println("Ingrese una placa");
+                    String placa = readS.nextLine();
+                    System.out.println("Ingrese una marca");
+                    String marca = readS.nextLine();
+                    System.out.println("Ingrese un modelo");
+                    String modelo = readS.nextLine();     
+                    System.out.println("Ingrese el tipo del carro\n1. Turismo, Camioneta, etc.\n2. Motocicleta\n3. Autobus");
+                    String tipoV = readS.nextLine();
+                    System.out.println("Ingrese el año de lanzamiento del carro (yyyy)");
+                    String fecha = readS.nextLine();
+                    DateFormat df = new SimpleDateFormat("yyyy");
+                    Date yearR = df.parse(fecha);
+                    Color color = JColorChooser.showDialog(null, "Ingrese el color del vehiculo", Color.yellow);
                     
+                    System.out.println("Ingrese la velocidad maxima de la motocicleta");
+                    double maxSpeed = read.nextDouble();
+                    System.out.println("Ingrese el peso de la moto");
+                    double pesoM = read.nextDouble();
+                    double gasCons = read.nextDouble();
+                    
+                    Motocicleta moto = new Motocicleta(maxSpeed, pesoM, gasCons,placa, marca, modelo, tipoV, yearR, color);
                     
                 }//fin case 2
                 break;
