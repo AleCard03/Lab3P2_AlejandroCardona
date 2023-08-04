@@ -5,6 +5,7 @@
 package lab3p2_alejandrocardona;
 
 import java.awt.Color;
+import java.util.Date;
 
 /**
  *
@@ -16,10 +17,10 @@ public class Vehiculo {
     private String marca;
     private String modelo;
     private String tipo;
-    private int año;
+    private Date año;
     private Color color;
 
-    public Vehiculo(String placa, String marca, String modelo, String tipo, int año, Color color) {
+    public Vehiculo(String placa, String marca, String modelo, String tipo, Date año, Color color) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -60,11 +61,11 @@ public class Vehiculo {
         this.tipo = tipo;
     }
 
-    public int getAño() {
+    public Date getAño() {
         return año;
     }
 
-    public void setAño(int año) {
+    public void setAño(Date año) {
         this.año = año;
     }
     

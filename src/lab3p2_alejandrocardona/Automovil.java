@@ -5,18 +5,19 @@
 package lab3p2_alejandrocardona;
 
 import java.awt.Color;
+import java.util.Date;
 
 public class Automovil extends Vehiculo {
     
     private String comb;
-    private int puestas;
+    private int puertas;
     private String transmision;
     private int asientos;
 
-    public Automovil(String comb, int puestas, String transmision, int asientos, String placa, String marca, String modelo, String tipo, int año, Color color) {
+    public Automovil(String comb, int puertas, String transmision, int asientos, String placa, String marca, String modelo, String tipo, Date año, Color color) {
         super(placa, marca, modelo, tipo, año, color);
         this.comb = comb;
-        this.puestas = puestas;
+        this.puertas = puertas;
         this.transmision = transmision;
         this.asientos = asientos;
     }
@@ -29,12 +30,12 @@ public class Automovil extends Vehiculo {
         this.comb = comb;
     }
 
-    public int getPuestas() {
-        return puestas;
+    public int getPuertas() {
+        return puertas;
     }
 
-    public void setPuestas(int puestas) {
-        this.puestas = puestas;
+    public void setPuestas(int puertas) {
+        this.puertas = puertas;
     }
 
     public String getTransmision() {

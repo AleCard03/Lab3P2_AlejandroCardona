@@ -2,6 +2,7 @@
 package lab3p2_alejandrocardona;
 
 import java.awt.Color;
+import java.util.Date;
 
 public class Autobus extends Vehiculo{
     
@@ -9,7 +10,7 @@ public class Autobus extends Vehiculo{
     private int numEjes;
     private double longitud;
 
-    public Autobus(int capacidad, int numEjes, double longitud, String placa, String marca, String modelo, String tipo, int año, Color color) {
+    public Autobus(int capacidad, int numEjes, double longitud, String placa, String marca, String modelo, String tipo, Date año, Color color) {
         super(placa, marca, modelo, tipo, año, color);
         this.capacidad = capacidad;
         this.numEjes = numEjes;
