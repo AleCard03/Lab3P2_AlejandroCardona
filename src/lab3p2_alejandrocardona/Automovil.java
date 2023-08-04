@@ -57,7 +57,7 @@ public class Automovil extends Vehiculo {
     @Override
     public String toString() {
         
-        return super.toString()+"Automovil{" + "comb=" + comb + ", puertas=" + puertas + ", transmision=" + transmision + ", asientos=" + asientos + '}';
+        return super.toString()+"Automovil\n" + "comb: " + comb + "\npuertas: " + puertas + "\ntransmision: " + transmision + "\nasientos: " + asientos ;
     }
 
     

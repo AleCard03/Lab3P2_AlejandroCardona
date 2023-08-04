@@ -331,6 +331,218 @@ public class Lab3P2_AlejandroCardona {
                         
                     }
                     
+                    if (vehiculoLista.get(modV) instanceof Motocicleta){
+                        
+                        System.out.println("""
+                                           Que desea modificar?
+                                           1- Placa
+                                           2- Marca
+                                           3- Modelo
+                                           4- Tipo
+                                           5- Color
+                                           6- Año
+                                           7- Velocidad Maxima
+                                           8- Peso
+                                           9- Consumo de Gas
+                                           """);
+                        
+                        int modOp = read.nextInt();
+                        
+                        switch(modOp){
+                            
+                            case 1 : {
+                                
+                                System.out.println("Ingrese una placa");
+                                String placa = readS.nextLine();
+                                vehiculoLista.get(modV).setMarca(placa);      
+                                                                
+                            }//fin case 1
+                            break;
+                            
+                            case 2 : {
+                                
+                                System.out.println("Ingrese una marca");
+                                String marca = readS.nextLine();
+                                vehiculoLista.get(modV).setMarca(marca);
+                                
+                            }//fin case 2
+                            break;
+                            
+                            case 3 : {
+                                
+                                System.out.println("Ingrese un modelo");
+                                String modelo = readS.nextLine();   
+                                vehiculoLista.get(modV).setModelo(modelo);
+                                
+                                
+                                
+                            }//fin case 3
+                            break;
+                            
+                            case 4 : {
+                                
+                                System.out.println("Ingrese el tipo del carro (Turismo, Camioneta, Etc.");
+                                String tipoV = readS.nextLine();
+                                vehiculoLista.get(modV).setTipo(tipoV);
+                                
+                                
+                            }//fin case 4
+                            break;
+                            
+                            case 5 : {
+                                
+                                System.out.println("Ingrese el año de lanzamiento del carro (yyyy)");
+                                String fecha = readS.nextLine();
+                                DateFormat df = new SimpleDateFormat("yyyy");
+                                Date yearR = df.parse(fecha);
+                                vehiculoLista.get(modV).setAño(yearR);
+                                
+                            }//fin case 5
+                            break;
+                            
+                            case 6 : {
+                                
+                                Color color = JColorChooser.showDialog(null, "Ingrese el color del vehiculo", Color.yellow);
+                                vehiculoLista.get(modV).setColor(color);
+                                
+                            }//fin case 6
+                            break;
+                            
+                            case 7 : {
+                                
+                                System.out.println("Ingrese la velocidad maxima de la motocicleta");
+                                double maxSpeed = read.nextDouble();
+                                ((Motocicleta)vehiculoLista.get(modV)).setMaxSpeed(maxSpeed);
+                                
+                            }//fin case 7
+                            break;
+                            
+                            case 8 : {
+                                
+                                System.out.println("Ingrese le peso de la motocicleta");
+                                double peso = read.nextDouble();
+                                ((Motocicleta)vehiculoLista.get(modV)).setPeso(peso);
+                                
+                            }//fin case 8
+                            break;
+                            
+                            case  9 :{
+                                
+                                System.out.println("Ingrese el consumo de gasolina de la moto");
+                                double gasCons = read.nextDouble();
+                                ((Motocicleta)vehiculoLista.get(modV)).setGasCons(gasCons);
+                                
+                            }//fin case 9
+                            break;
+                        }
+                    
+                    
+                    }
+                    if (vehiculoLista.get(modV) instanceof Motocicleta){
+                        
+                        System.out.println("""
+                                           Que desea modificar?
+                                           1- Placa
+                                           2- Marca
+                                           3- Modelo
+                                           4- Tipo
+                                           5- Color
+                                           6- Año
+                                           7- Velocidad Maxima
+                                           8- Peso
+                                           9- Consumo de Gas
+                                           """);
+                        
+                        int modOp = read.nextInt();
+                        
+                        switch(modOp){
+                            
+                            case 1 : {
+                                
+                                System.out.println("Ingrese una placa");
+                                String placa = readS.nextLine();
+                                vehiculoLista.get(modV).setMarca(placa);      
+                                                                
+                            }//fin case 1
+                            break;
+                            
+                            case 2 : {
+                                
+                                System.out.println("Ingrese una marca");
+                                String marca = readS.nextLine();
+                                vehiculoLista.get(modV).setMarca(marca);
+                                
+                            }//fin case 2
+                            break;
+                            
+                            case 3 : {
+                                
+                                System.out.println("Ingrese un modelo");
+                                String modelo = readS.nextLine();   
+                                vehiculoLista.get(modV).setModelo(modelo);
+                                
+                                
+                                
+                            }//fin case 3
+                            break;
+                            
+                            case 4 : {
+                                
+                                System.out.println("Ingrese el tipo del carro (Turismo, Camioneta, Etc.");
+                                String tipoV = readS.nextLine();
+                                vehiculoLista.get(modV).setTipo(tipoV);
+                                
+                                
+                            }//fin case 4
+                            break;
+                            
+                            case 5 : {
+                                
+                                System.out.println("Ingrese el año de lanzamiento del carro (yyyy)");
+                                String fecha = readS.nextLine();
+                                DateFormat df = new SimpleDateFormat("yyyy");
+                                Date yearR = df.parse(fecha);
+                                vehiculoLista.get(modV).setAño(yearR);
+                                
+                            }//fin case 5
+                            break;
+                            
+                            case 6 : {
+                                
+                                Color color = JColorChooser.showDialog(null, "Ingrese el color del vehiculo", Color.yellow);
+                                vehiculoLista.get(modV).setColor(color);
+                                
+                            }//fin case 6
+                            break;
+                            
+                            case 7 : {
+                                
+                                System.out.println("Ingrese la capacidad maxima del bus");
+                                int capacidad = read.nextInt();
+                                ((Autobus)vehiculoLista.get(modV)).setCapacidad(capacidad);
+                                
+                            }//fin case 7
+                            break;
+                            
+                            case 8 : {
+                                
+                                System.out.println("Ingrese el numero de ejes del bus");
+                                int numEjes = read.nextInt();
+                                ((Autobus)vehiculoLista.get(modV)).setNumEjes(numEjes);
+                                
+                            }//fin case 8
+                            break;
+                            
+                            case  9 :{
+                                
+                                System.out.println("Ingrese el consumo de gasolina de la moto");
+                                double longitud = read.nextInt();
+                                ((Autobus)vehiculoLista.get(modV)).setLongitud(longitud);
+                                
+                            }//fin case 9
+                            break;
+                        }
+                    }
                 }//fin case 4
                 break;
                 

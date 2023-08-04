@@ -20,9 +20,35 @@ public class Motocicleta extends Vehiculo {
         this.gasCons = gasCons;
     }
 
+    public double getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getGasCons() {
+        return gasCons;
+    }
+
+    public void setGasCons(double gasCons) {
+        this.gasCons = gasCons;
+    }
+    
+    
+
     @Override
     public String toString() {
-        return super.toString()+"Motocicleta{" + "maxSpeed=" + maxSpeed + ", peso=" + peso + ", gasCons=" + gasCons + '}';
+        return super.toString()+"Motocicleta\n" + "maxSpeed: " + maxSpeed + "\npeso: " + peso + "\ngasCons: " + gasCons;
     }
     
     
