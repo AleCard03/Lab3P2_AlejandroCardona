@@ -19,6 +19,11 @@ public class Motocicleta extends Vehiculo {
         this.peso = peso;
         this.gasCons = gasCons;
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+"Motocicleta{" + "maxSpeed=" + maxSpeed + ", peso=" + peso + ", gasCons=" + gasCons + '}';
+    }
     
     
     

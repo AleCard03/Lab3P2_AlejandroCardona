@@ -79,5 +79,12 @@ public class Vehiculo {
     public void setColor(Color color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" + "placa=" + placa + ", marca=" + marca + ", modelo=" + modelo + ", tipo=" + tipo + ", a\u00f1o=" + año + ", color=" + color + '}';
+    }
+    
+    
     
 }

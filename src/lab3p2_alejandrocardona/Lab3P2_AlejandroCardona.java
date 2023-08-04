@@ -14,7 +14,7 @@ public class Lab3P2_AlejandroCardona {
     
     static Scanner read = new Scanner(System.in);
     static Scanner readS = new Scanner(System.in);
-    static ArrayList<Vehiculo> carritos = new ArrayList();
+    static ArrayList<Vehiculo> vehiculoLista = new ArrayList();
     
     public static void main(String[] args) throws ParseException {
     
@@ -96,7 +96,7 @@ public class Lab3P2_AlejandroCardona {
                     int asientos = read.nextInt();
                     
                     Automovil auto = new Automovil(comb, puertas, transmision, asientos,placa, marca, modelo, tipoV, yearR, color);
-                    carritos.add(auto);
+                    vehiculoLista.add(auto);
                     
                 }//fin case 1
                 break;
@@ -125,6 +125,7 @@ public class Lab3P2_AlejandroCardona {
                     double gasCons = read.nextDouble();
                     
                     Motocicleta moto = new Motocicleta(maxSpeed, pesoM, gasCons,placa, marca, modelo, tipoV, yearR, color);
+                    vehiculoLista.add(moto);
                     
                 }//fin case 2
                 break;
@@ -155,7 +156,8 @@ public class Lab3P2_AlejandroCardona {
                     System.out.println("Ingrese la longitud del bus");
                     double longitud = read.nextDouble();
                     
-                    Motocicleta moto = new Motocicleta(capacidad, numEjes, longitud,placa, marca, modelo, tipoV, yearR, color);
+                    Autobus bus = new Autobus(capacidad, numEjes, longitud,placa, marca, modelo, tipoV, yearR, color);
+                    vehiculoLista.add(bus);
                     
                 }//fin case 3
                 break;
@@ -176,7 +178,7 @@ public class Lab3P2_AlejandroCardona {
                 
                 case 6 : {
                     
-                    
+                    printList();
                     
                 }//fin case 6
                 break;
@@ -205,6 +207,18 @@ public class Lab3P2_AlejandroCardona {
             }
         }
         
-    }
+    }//fin main
+    
+    static void printList (){
+        
+        String acum = "";
+        for (Vehiculo vehiculo : vehiculoLista) {
+            
+            acum += vehiculoLista.indexOf(vehiculo)+"- "+vehiculo;
+            
+        }
+        System.out.println(acum);
+        
+    }//fin printList
     
 }

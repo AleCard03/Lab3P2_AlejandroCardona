@@ -40,6 +40,12 @@ public class Autobus extends Vehiculo{
     public void setLongitud(double longitud) {
         this.longitud = longitud;
     }
+
+    @Override
+    public String toString() {
+        
+        return super.toString()+"Autobus{" + "capacidad=" + capacidad + ", numEjes=" + numEjes + ", longitud=" + longitud + '}';
+    }
     
     
     

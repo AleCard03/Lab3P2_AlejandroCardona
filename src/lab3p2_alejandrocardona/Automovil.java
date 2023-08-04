@@ -54,6 +54,12 @@ public class Automovil extends Vehiculo {
         this.asientos = asientos;
     }
 
+    @Override
+    public String toString() {
+        
+        return super.toString()+"Automovil{" + "comb=" + comb + ", puertas=" + puertas + ", transmision=" + transmision + ", asientos=" + asientos + '}';
+    }
+
     
    
 }
